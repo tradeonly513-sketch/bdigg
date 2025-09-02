@@ -11,7 +11,6 @@ import CTASection from '../components/home/CTASection'
 import AboutSection from '../components/home/AboutSection'
 import ContactSection from '../components/home/ContactSection'
 import Footer from '../components/home/Footer'
-import Navigation from '../components/common/Navigation'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
@@ -37,9 +36,6 @@ const Home = () => {
 
   return (
     <div className='text-white relative'>
-      {/* Navigation */}
-      <Navigation />
-      
       {/* Fixed video background */}
       <div className='h-screen w-screen fixed top-0 left-0 z-0'>
         <Video />
@@ -48,9 +44,9 @@ const Home = () => {
       </div>
       
       {/* Scrollable content */}
-      <div className='relative z-20 pt-20'>
+      <div className='relative z-20'>
         {/* Hero Section */}
-        <div ref={heroSectionRef} className='h-screen w-screen relative pb-5 flex flex-col justify-between hero-content -mt-20'>
+        <div ref={heroSectionRef} className='h-screen w-screen relative pb-5 flex flex-col justify-between hero-content'>
           <HomeHeroText />
           <HomeBottomText />
         </div>

@@ -88,7 +88,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/privacy"
+                  to="/privacy-policy"
                   className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline'
                 >
                   Privacy Policy
@@ -96,7 +96,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/terms"
+                  to="/terms-of-service"
                   className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline'
                 >
                   Terms & Conditions
@@ -104,10 +104,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/affiliates"
+                  to="/affiliate-program"
                   className='font-[font1] text-base lg:text-lg text-gray-300 hover:text-[#D3FD50] transition-colors duration-300 hover:underline'
                 >
-                  Affiliates
+                  Affiliate Program
                 </Link>
               </li>
             </ul>
@@ -144,6 +144,8 @@ const Footer = () => {
             <div className='font-[font1] text-base lg:text-lg text-gray-300'>
               <a 
                 href="mailto:contact@wedding92.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className='hover:text-[#D3FD50] transition-colors duration-300 hover:underline'
               >
                 contact@wedding92.com

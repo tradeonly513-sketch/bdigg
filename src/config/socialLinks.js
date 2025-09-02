@@ -5,7 +5,7 @@ export const socialLinks = {
 }
 
 export const socialIcons = [
-  { name: 'Instagram', url: socialLinks.instagram, icon: '📷' },
-  { name: 'Facebook', url: socialLinks.facebook, icon: '📘' },
-  { name: 'LinkedIn', url: socialLinks.linkedin, icon: '💼' }
+  { name: 'Instagram', url: socialLinks.instagram, icon: '📷', target: '_blank', rel: 'noopener noreferrer' },
+  { name: 'Facebook', url: socialLinks.facebook, icon: '📘', target: '_blank', rel: 'noopener noreferrer' },
+  { name: 'LinkedIn', url: socialLinks.linkedin, icon: '💼', target: '_blank', rel: 'noopener noreferrer' }
 ]

@@ -6,9 +6,9 @@ import LoadingFallback from './components/common/LoadingFallback'
 const Home = lazy(() => import('./pages/Home'))
 const Projects = lazy(() => import('./pages/Projects'))
 const Contact = lazy(() => import('./pages/Contact'))
-const Privacy = lazy(() => import('./pages/Privacy'))
-const Terms = lazy(() => import('./pages/Terms'))
-const Affiliates = lazy(() => import('./pages/Affiliates'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
+const TermsOfService = lazy(() => import('./pages/TermsOfService'))
+const AffiliateProgram = lazy(() => import('./pages/AffiliateProgram'))
 
 
 const App = () => {
@@ -19,9 +19,9 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/privacy' element={<Privacy />} />
-          <Route path='/terms' element={<Terms />} />
-          <Route path='/affiliates' element={<Affiliates />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/terms-of-service' element={<TermsOfService />} />
+          <Route path='/affiliate-program' element={<AffiliateProgram />} />
         </Routes>
       </Suspense>
     </div>
