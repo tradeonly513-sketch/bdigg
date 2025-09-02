@@ -1,38 +1,15 @@
 import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { Link } from 'react-router-dom'
+import PageWrapper from '../components/common/PageWrapper'
 
 const Terms = () => {
-  const pageRef = useRef(null)
 
-  useGSAP(() => {
-    gsap.fromTo('.terms-content',
-      {
-        opacity: 0,
-        y: 30
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        stagger: {
-          amount: 0.2
-        },
-        delay: 0.5
-      }
-    )
-  })
 
   return (
-    <div ref={pageRef} className='min-h-screen bg-white text-black'>
+    <PageWrapper className='bg-white text-black'>
       <div className='container mx-auto lg:px-12 px-6 py-24'>
         <div className='max-w-4xl mx-auto'>
-          <Link to='/' className='inline-block mb-8 text-[#D3FD50] hover:text-black transition-colors duration-300'>
-            ← Back to Home
-          </Link>
-          
           <h1 className='terms-content font-[font2] lg:text-6xl text-4xl uppercase mb-12 leading-tight'>
             Terms & Conditions
           </h1>
@@ -52,7 +29,7 @@ const Terms = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageWrapper>
   )
 }
 

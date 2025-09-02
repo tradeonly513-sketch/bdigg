@@ -2,28 +2,10 @@ import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { Link } from 'react-router-dom'
+import PageWrapper from '../components/common/PageWrapper'
 
 const Affiliates = () => {
-  const pageRef = useRef(null)
 
-  useGSAP(() => {
-    gsap.fromTo('.affiliate-content',
-      {
-        opacity: 0,
-        y: 30
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        stagger: {
-          amount: 0.3
-        },
-        delay: 0.5
-      }
-    )
-  })
 
   const benefits = [
     {
@@ -49,13 +31,9 @@ const Affiliates = () => {
   ]
 
   return (
-    <div ref={pageRef} className='min-h-screen bg-white text-black'>
+    <PageWrapper className='bg-white text-black'>
       <div className='container mx-auto lg:px-12 px-6 py-24'>
         <div className='max-w-6xl mx-auto'>
-          <Link to='/' className='inline-block mb-8 text-[#D3FD50] hover:text-black transition-colors duration-300'>
-            ← Back to Home
-          </Link>
-          
           <div className='text-center mb-16'>
             <h1 className='affiliate-content font-[font2] lg:text-[8vw] text-6xl uppercase mb-8 leading-tight'>
               Affiliate Program
@@ -132,7 +110,7 @@ const Affiliates = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageWrapper>
   )
 }
 

@@ -12,12 +12,22 @@
 /* Smooth scrolling for the entire page */
 html {
     scroll-behavior: smooth;
+    /* Prevent layout shift during loading */
+    overflow-y: scroll;
 }
 
 /* Ensure body allows scrolling */
 body {
     overflow-x: hidden;
     overflow-y: auto;
+    /* Prevent flash of unstyled content */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Loading state for body */
+body.loading {
+    opacity: 0;
 }
 
 /* Custom scrollbar styling */
@@ -74,4 +84,39 @@ nav {
 
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
+}
+
+/* Prevent content jumping during animations */
+.gsap-animation {
+    will-change: transform, opacity;
+}
+
+/* Ensure videos load properly */
+iframe {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+iframe[src=""] {
+    opacity: 0;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Prevent layout shifts */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Enhanced focus states for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid #D3FD50;
+    outline-offset: 2px;
 }

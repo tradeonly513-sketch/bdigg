@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import VideoGrid from '../components/projects/VideoGrid'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import PageWrapper from '../components/common/PageWrapper'
 
 /**
  * Projects component - Now displays YouTube videos in a responsive grid
@@ -103,7 +104,8 @@ const Projects = () => {
   })
 
   return (
-    <div className='lg:px-12 px-6 lg:py-16 py-8 mb-[50vh] bg-white'>
+    <PageWrapper className='bg-white'>
+      <div className='lg:px-12 px-6 lg:py-16 py-8 mb-[50vh]'>
       {/* Page Header */}
       <div className='pt-[35vh] mb-16'>
         <h1 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase text-black'>
@@ -136,7 +138,8 @@ const Projects = () => {
           />
         </section>
       </div>
-    </div>
+      </div>
+    </PageWrapper>
   )
 }
 
